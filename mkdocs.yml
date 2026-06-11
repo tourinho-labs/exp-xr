@@ -1,0 +1,6 @@
+site_name: exp-xr
+site_description: Workload experiment - Caminho B (App XR/Crossplane)
+nav:
+  - Home: index.md
+plugins:
+  - techdocs-core

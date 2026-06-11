@@ -1,0 +1,36 @@
+# Gerado pelo scaffolder. Quase tudo é derivado — edite só o que precisar.
+# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-component
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: exp-xr
+  description: Workload experiment - Caminho B (App XR/Crossplane)
+  annotations:
+    github.com/project-slug: tourinho-labs/exp-xr
+    backstage.io/techdocs-ref: dir:.
+    backstage.io/kubernetes-id: exp-xr
+    argocd/app-name: exp-xr
+    kyverno.io/namespace: exp-xr
+    kyverno.io/kind: Deployment,Pod
+    kyverno.io/resource-name: exp-xr
+  tags:
+    - nodejs
+    - fastify
+    - kubernetes
+  links:
+    - url: https://github.com/tourinho-labs/exp-xr
+      title: Repositório
+      icon: github
+spec:
+  type: service
+  lifecycle: experimental
+  owner: user:development/guest
+  system: system:default/customer-apps
+  dependsOn:
+    - resource:default/policy-reporter
+  # Relações surgem com o tempo — descomente e aponte quando existirem.
+  # O auto-discovery reingere este arquivo sozinho a cada 30min.
+  # dependsOn:
+  #   - resource:postgresql
+  # providesApis:
+  #   - minha-api
