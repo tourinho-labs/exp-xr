@@ -1,0 +1,5 @@
+# Service definition — única superfície de deploy que o dev edita.
+# Schema: org-ci-platform/.github/actions/service-definition-validate/schema.json
+name: exp-xr
+size: small
+http: true
